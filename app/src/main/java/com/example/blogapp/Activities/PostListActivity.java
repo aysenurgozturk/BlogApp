@@ -77,6 +77,7 @@ public class PostListActivity extends AppCompatActivity {
 
             case R.id.action_signout:
                 if(mUser!=null && mAuth!=null){
+                    FirebaseAuth.getInstance().signOut();
                     startActivity(new Intent(PostListActivity.this, MainActivity.class));
                     finish();
                 }

@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.action_signout){
+            FirebaseAuth.getInstance().signOut();
             mAuth.signOut();
         }
         return super.onOptionsItemSelected(item);
